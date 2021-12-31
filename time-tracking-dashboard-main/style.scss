@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+// ### Primary
+
+$Blue: hsl(246, 80%, 60%);
+$LightOrange: hsl(15, 100%, 70%);
+$SoftBlue: hsl(195, 74%, 62%);
+$LightRed: hsl(348, 100%, 68%);
+$LimeGreen: hsl(145, 58%, 55%);
+$Violet : hsl(264, 64%, 52%);
+$SoftOrange : hsl(43, 84%, 65%);
+
+// ### Neutral
+
+$VeryDarkBlue: hsl(226, 43%, 10%);
+$DarkBlue: hsl(235, 46%, 20%);
+$DesaturatedBlue: hsl(235, 45%, 61%);
+$PaleBlue: hsl(236, 100%, 87%);
+
+html {
+    font-size: 18px;
+}
+* {  
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+    font-family: Rubik;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    margin: 5vh 5vw;
+}
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    "main   work      play    study"
+    "main   exercise  social  selfCare"
+    ;
+    padding: 1em;
+    gap: 1em;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////
+/////////////////////////    część opisująca karty
+
+// karta główna //
+
+.user-section { 
+    border-radius: 1em;
+    background-color: $DarkBlue;
+    grid-area: main;
+    .us-report {
+        border-radius: .5em;
+        background-color: $Blue;
+        padding: 1em;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .us-planner {
+        padding: 1em;
+        & div {
+            padding: .5em;
+            font-weight: 300;
+            &:hover{
+                cursor: pointer;
+                color: $PaleBlue;
+            }
+        }
+    }
+    img {
+        height: 50px;
+        border: 2px solid $PaleBlue;
+        border-radius: 50%;
+    }
+}
+
+
+/////////////////////////   karty czasu   //////////////////////////
+
+.work-section {
+    background-image: url('images/icon-work.svg');
+    background-color: $LightOrange;
+    background-repeat: no-repeat;
+    background-position: 90% -10%;
+
+}
+.play-section {
+    background-image: url('images/icon-play.svg');
+    background-color: $SoftBlue;
+    background-repeat: no-repeat;
+    background-position: 90% -5%;
+    
+}
+.study-section {
+    background-image: url('images/icon-study.svg');
+    background-color: $LightRed;
+    background-repeat: no-repeat;
+    background-position: 90% -10%;
+    
+}
+.exercise-section {
+    background-image: url('images/icon-exercise.svg');
+    background-color: $LimeGreen;
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+    
+}
+.social-section {
+    background-image: url('images/icon-social.svg');
+    background-color: $Violet;
+    background-repeat: no-repeat;
+    background-position: 90% -20%;
+    
+}
+.selfCare-section {
+    background-image: url('images/icon-self-care.svg');
+    background-color: $SoftOrange;
+    background-repeat: no-repeat;
+    background-position: 90% -10%;
+    
+}
+
+//////////////////////  część tekstowa kart  //////////////////////
+
+.card {
+    border-radius: 1em 1em 2em 2em;
+    position: relative;
+}
+.card-content {
+    
+    position: absolute;
+    top: 20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1em;
+    background-color: $DarkBlue;
+    padding: 1em;
+    .time-wrapper {
+        padding: 1em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        .time-div {
+            font-size: 2rem;
+            font-weight: 300;
+            
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+.info-paragraph {
+    font-size: .7rem;
+}
+.card-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dots {
+    height: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    .dot {
+        height: 3px;
+        width: 3px;
+        background-color: $PaleBlue;
+    }
+    &:hover {
+        cursor: pointer;
+        .dot{
+            background-color: whitesmoke;
+        }
+    }
+}
+
+
+///// ukrycie danych kart czasu
+.hidden {
+    display: none;
+}
+
+
+
+// @media(max-width: 775px){
+//     .main-section {
+//         display: flex; 
+//         flex-direction: column;
+//         align-items: center;
+//         .user-section {
+//             width: 300px;
+//         }
+//         .card {
+//             width: 300px;
+//             height: 200px;
+//         }
+//     }
+// }
+
+@media(max-width: 775px){
+    .main-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: none;
+        gap: 1em;
+        .user-section {
+            grid-column: 2;
+            grid-row: 1;
+            height: 400px;
+        }
+        .work-section {
+            grid-column: 2;
+            grid-row: 2;
+            height: 200px;
+        }
+        .play-section {
+            grid-column: 2;
+            grid-row: 3;
+            height: 200px;
+        }
+        .study-section {
+            grid-column: 2;
+            grid-row: 4;
+            height: 200px;
+        }
+        .exercise-section {
+            grid-column: 2;
+            grid-row: 5;
+            height: 200px;
+        }
+        .social-section {
+            grid-column: 2;
+            grid-row: 6;
+            height: 200px;
+        }
+        .selfCare-section {
+            grid-column: 2;
+            grid-row: 7;
+            height: 200px;
+        }
+    }
+}

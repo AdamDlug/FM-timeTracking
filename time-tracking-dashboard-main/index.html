@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <style>
+    .attribution { padding: 1em 0; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <section class="main-section">
+
+    <!--   ///////////////////  Karta użytkownika  ///////////////////    -->
+
+    <section class="user-section">
+      <div class="us-report">
+        <img src="images/image-jeremy.png" alt="profile image">
+        <p class="info-paragraph">Report for</p>
+        <p>Jeremy Robson</p>
+      </div>
+      <div class="us-planner">
+        <div id="DailyInformations">Daily</div>
+        <div id="WeeklyInformations">Weekly</div>
+        <div id="MonthlyInformations">Monthly</div> 
+      </div>     
+    </section>
+
+
+    <!--   ///////////////////  Karta czasu pracy  ///////////////////    -->
+    
+    <section class="work-section card">
+      <div class="card-content">
+        <!-- nazwa karty i menu -->
+        <div class="card-name">
+          <div>Work</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <!-- część wyświetlająca czas  -->
+        <div class="time-wrapper">                        
+          <div name="daily" class="time-div">
+            <p>5hrs</p>                 <!-- daily -->
+            <p class="info-paragraph">Yesterday - 7hrs</p>      <!-- daily -->
+          </div>
+          <div name="weekly" class="time-div hidden">
+            <p>32hrs</p>                <!-- weekly -->
+            <p class="info-paragraph">Last Week - 36hrs</p>     <!-- weekly -->
+          </div>
+          <div name="monthly" class="time-div hidden">
+            <p>103hrs</p>               <!-- monthly -->
+            <p class="info-paragraph">Last Month - 128hrs</p>    <!-- monthly -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--   ///////////////////  Karta czasu zazbawy  ///////////////////    -->
+    
+    <section class="play-section card">
+      <div class="card-content">
+        <!-- nazwa karty i menu -->
+        <div class="card-name">
+          <div>Play</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <!-- część wyświetlająca czas  -->
+        <div class="time-wrapper">                        
+          <div name="daily" class="time-div">
+            <p>1hr</p>                 <!-- daily -->
+            <p class="info-paragraph">Yesterday - 2hrs</p>      <!-- daily -->
+          </div>
+          <div name="weekly" class="time-div hidden">
+            <p>10hrs</p>                <!-- weekly -->
+            <p class="info-paragraph">Last Week - 8hrs</p>     <!-- weekly -->
+          </div>
+          <div name="monthly" class="time-div hidden">
+            <p>23hrs</p>               <!-- monthly -->
+            <p class="info-paragraph">Last Month - 29hrs</p>    <!-- monthly -->
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--   ///////////////////  Karta czasu nauki  ///////////////////    -->
+    
+    <section class="study-section card">
+      <div class="card-content">
+        <!-- nazwa karty i menu -->
+        <div class="card-name">
+          <div>Study</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <!-- część wyświetlająca czas  -->
+        <div class="time-wrapper">                        
+          <div name="daily" class="time-div">
+            <p>0hrs</p>                 <!-- daily -->
+            <p class="info-paragraph">Yesterday - 1hr</p>      <!-- daily -->
+          </div>
+          <div name="weekly" class="time-div hidden">
+            <p>4hrs</p>                <!-- weekly -->
+            <p class="info-paragraph">Last Week - 7hrs</p>     <!-- weekly -->
+          </div>
+          <div name="monthly" class="time-div hidden">
+            <p>13hrs</p>               <!-- monthly -->
+            <p class="info-paragraph">Last Month - 19hrs</p>    <!-- monthly -->
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--   ///////////////////  Karta czasu ćwiczeń  ///////////////////    -->
+
+    <section class="exercise-section card">
+      <div class="card-content">
+        <!-- nazwa karty i menu -->
+        <div class="card-name">
+          <div>Exercise</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <!-- część wyświetlająca czas  -->
+        <div class="time-wrapper">                        
+          <div name="daily" class="time-div">
+            <p>1hr</p>                 <!-- daily -->
+            <p class="info-paragraph">Yesterday - 1hr</p>      <!-- daily -->
+          </div>
+          <div name="weekly" class="time-div hidden">
+            <p>4hrs</p>                <!-- weekly -->
+            <p class="info-paragraph">Last Week - 5hrs</p>     <!-- weekly -->
+          </div>
+          <div name="monthly" class="time-div hidden">
+            <p>11hrs</p>               <!-- monthly -->
+            <p class="info-paragraph">Last Month - 18hrs</p>    <!-- monthly -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--   ///////////////////  Karta czasu "social"  ///////////////////    -->
+
+    <section class="social-section card">
+      <div class="card-content">
+        <!-- nazwa karty i menu -->
+        <div class="card-name">
+          <div>Social</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <!-- część wyświetlająca czas  -->
+        <div class="time-wrapper">                        
+          <div name="daily" class="time-div">
+            <p>1hr</p>                 <!-- daily -->
+            <p class="info-paragraph">Yesterday - 3hrs</p>      <!-- daily -->
+          </div>
+          <div name="weekly" class="time-div hidden">
+            <p>5hrs</p>                <!-- weekly -->
+            <p class="info-paragraph">Last Week - 10hrs</p>     <!-- weekly -->
+          </div>
+          <div name="monthly" class="time-div hidden">
+            <p>21hrs</p>               <!-- monthly -->
+            <p class="info-paragraph">Last Month - 23hrs</p>    <!-- monthly -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--   ///////////////////  Karta czasu zdrowia  ///////////////////    -->
+
+    <section class="selfCare-section card">
+      <div class="card-content">
+        <!-- nazwa karty i menu -->
+        <div class="card-name">
+          <div>Self Care</div>
+          <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+        <!-- część wyświetlająca czas  -->
+        <div class="time-wrapper">                        
+          <div name="daily" class="time-div">
+            <p>0hr</p>                 <!-- daily -->
+            <p class="info-paragraph">Yesterday - 1hr</p>      <!-- daily -->
+          </div>
+          <div name="weekly" class="time-div hidden">
+            <p>2hrs</p>                <!-- weekly -->
+            <p class="info-paragraph">Last Week - 2hrs</p>     <!-- weekly -->
+          </div>
+          <div name="monthly" class="time-div hidden">
+            <p>7hrs</p>               <!-- monthly -->
+            <p class="info-paragraph">Last Month - 11hrs</p>    <!-- monthly -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/AdamDlug" target="_blank">Adam Dlug</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
